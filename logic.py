@@ -40,7 +40,7 @@ class Logic(QMainWindow, Ui_TV_window):
 
     def channel_1(self) -> None:
         """
-        Method to set channel to 0
+        Method to set channel to 1
         """
         if self.__status__:
             self.__channel__ = 1
@@ -48,7 +48,7 @@ class Logic(QMainWindow, Ui_TV_window):
 
     def channel_2(self) -> None:
         """
-        Method to set channel to 0
+        Method to set channel to 2
         """
         if self.__status__:
             self.__channel__ = 2
@@ -56,7 +56,7 @@ class Logic(QMainWindow, Ui_TV_window):
 
     def channel_3(self) -> None:
         """
-        Method to set channel to 0
+        Method to set channel to 3
         """
         if self.__status__:
             self.__channel__ = 3
