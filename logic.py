@@ -25,6 +25,42 @@ class Logic(QMainWindow, Ui_TV_window):
         self.button_channel_up.clicked.connect(lambda: self.channel_up())
         self.button_channel_down.clicked.connect(lambda: self.channel_down())
         self.button_mute.clicked.connect(lambda: self.mute())
+        self.button_channel0.clicked.connect(lambda: self.channel_0())
+        self.button_channel1.clicked.connect(lambda: self.channel_1())
+        self.button_channel2.clicked.connect(lambda: self.channel_2())
+        self.button_channel3.clicked.connect(lambda: self.channel_3())
+
+    def channel_0(self) -> None:
+        """
+        Method to set channel to 0
+        """
+        if self.__status__:
+            self.__channel__ = 0
+            self.set_channel()
+
+    def channel_1(self) -> None:
+        """
+        Method to set channel to 0
+        """
+        if self.__status__:
+            self.__channel__ = 1
+            self.set_channel()
+
+    def channel_2(self) -> None:
+        """
+        Method to set channel to 0
+        """
+        if self.__status__:
+            self.__channel__ = 2
+            self.set_channel()
+
+    def channel_3(self) -> None:
+        """
+        Method to set channel to 0
+        """
+        if self.__status__:
+            self.__channel__ = 3
+            self.set_channel()
 
     def power(self)->None:
         """
