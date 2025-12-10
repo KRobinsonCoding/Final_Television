@@ -10,6 +10,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def __init__(self)->None:
         """
         sets up default tv - off - 0 volume - channel 0
+        :return: None
         """
         super().__init__()
         self.__status__ = False
@@ -33,6 +34,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def channel_0(self) -> None:
         """
         Method to set channel to 0
+        :return: None
         """
         if self.__status__:
             self.__channel__ = 0
@@ -41,6 +43,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def channel_1(self) -> None:
         """
         Method to set channel to 1
+        :return: None
         """
         if self.__status__:
             self.__channel__ = 1
@@ -49,6 +52,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def channel_2(self) -> None:
         """
         Method to set channel to 2
+        :return: None
         """
         if self.__status__:
             self.__channel__ = 2
@@ -57,6 +61,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def channel_3(self) -> None:
         """
         Method to set channel to 3
+        :return: None
         """
         if self.__status__:
             self.__channel__ = 3
@@ -65,6 +70,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def power(self)->None:
         """
         Method to turn the television on and off
+        :return: None
         """
         self.__status__ = not self.__status__ #changes status to on or off
         if self.__status__:# if on sets channel
@@ -79,7 +85,8 @@ class Logic(QMainWindow, Ui_TV_window):
 
     def set_channel(self)->None:
         """
-        Method to set the television channel picture and title
+        Method to set the television channel picture and label
+        :return: None
         """
         if self.__channel__ == 0:
             self.label_image.setPixmap(QtGui.QPixmap("images/BTS.jpg"))
@@ -95,6 +102,10 @@ class Logic(QMainWindow, Ui_TV_window):
             self.label_channel_text.setText("3 - My Melody & Kuromi")
 
     def set_volume(self)->None:
+        """
+        Method to change the television volume
+        :return: None
+        """
         if self.__muted__:
             self.label_volumeimage.setPixmap(QtGui.QPixmap("images/mute-speaker-icon.jpg"))
             self.progress_bar.setProperty("value", 0)
@@ -105,6 +116,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def mute(self)->None:
         """
         Method to mute television volume
+        :return: None
         """
         if self.__status__:
             self.__muted__ = not self.__muted__
@@ -113,6 +125,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def channel_up(self)->None:
         """
         Method to increase television channel by one
+        :return: None
         """
         if self.__status__:
             if self.__channel__ == Logic.MAX_CHANNEL:
@@ -125,6 +138,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def channel_down(self)->None:
         """
         Method to decrease television channel by one
+        :return: None
         """
         if self.__status__:
             if self.__channel__ == Logic.MIN_CHANNEL:
@@ -137,6 +151,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def volume_up(self)->None:
         """
         Method to increase television volume by one
+        :return: None
         """
         if self.__status__:
             if self.__muted__:
@@ -148,6 +163,7 @@ class Logic(QMainWindow, Ui_TV_window):
     def volume_down(self)->None:
         """
         Method to decrease television volume by one
+        :return: None
         """
         if self.__status__:
             if self.__muted__:#if muted, unmutes
